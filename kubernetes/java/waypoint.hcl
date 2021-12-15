@@ -6,10 +6,10 @@ app "example-java" {
       builder="gcr.io/buildpacks/builder:v1"
     }
     registry {
-      use "docker" {
-        image = "example-java"
-        tag   = "1"
-        local = true
+      use "aws-ecr" {
+        region     = "eu-west-3"
+        repository = "waypoint-example-java"
+        tag        = "latest"
       }
     }
   }
