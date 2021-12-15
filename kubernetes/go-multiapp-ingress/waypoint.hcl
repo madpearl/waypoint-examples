@@ -1,7 +1,7 @@
 project = "example-go-multiapp-k8s-ingress"
 
 variable "namespace" {
-  default     = "ingress-nginx"
+  default     = "default"
   type        = string
   description = "The namespace to deploy and release to in your Kubernetes cluster."
 }
