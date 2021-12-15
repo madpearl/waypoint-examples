@@ -21,10 +21,10 @@ app "one" {
   build {
     use "pack" {}
     registry {
-      use "docker" {
-        image = "one"
-        tag   = "1"
-        local = false
+      use "aws-ecr" {
+        region     = "eu-west-3"
+        repository = "waypoint-example-one"
+        tag        = "v1"
       }
     }
   }
@@ -65,10 +65,10 @@ app "two" {
   build {
     use "pack" {}
     registry {
-      use "docker" {
-        image = "two"
-        tag   = "1"
-        local = false
+      use "aws-ecr" {
+        region     = "eu-west-3"
+        repository = "waypoint-example-two"
+        tag        = "v1"
       }
     }
   }
@@ -101,10 +101,10 @@ app "default" {
   build {
     use "pack" {}
     registry {
-      use "docker" {
-        image = "default"
-        tag   = "1"
-        local = false
+      use "aws-ecr" {
+        region     = "eu-west-3"
+        repository = "waypoint-example-default"
+        tag        = "v1"
       }
     }
   }
