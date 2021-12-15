@@ -10,7 +10,7 @@ app "example-nodejs" {
     use "pack" {}
     registry {
       use "aws-ecr" {
-        region     = "us-east-1"
+        region     = "eu-west-3"
         repository = "waypoint-example"
         tag        = "latest"
       }
